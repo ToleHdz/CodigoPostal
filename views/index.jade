@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Codigo Postal
+        link(href='/css/w3.css', rel='stylesheet')
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        script(src="/js/jquery-3.3.1.min.js")
+        script(src="/js/acciones.js")
+    body
+        header.w3-top.w3-blue.w3-center
+            h2 Codigo Postal
+        hr
+        .w3-display-middle.w3-card-4
+            .w3-container.w3-blue
+                h4 Busqueda por codigo postal
+            form
+                .w3-container
+                    hr
+                    label Ingrese Codigo Postal
+                    p
+                    input.w3-input(type="text", id="postal", placeholder="text here")
+                    hr
+                input.w3-btn.w3-blue.w3-block(type="button", id="ejecutar", value="Buscar", onclick='peticion()')
+        #modal.w3-modal
+            .w3-modal-content
+                header.w3-container.w3-teal.w3-center
+                    span.w3-button.w3-display-topright(onclick="cerrarModal()")
+                        i(class="fa fa-times fa-2x", aria-hidden="true")
+                    h2 Resultados
+                .w3-container
+                    p(id="colonias") Some text..
+                footer.w3-container.w3-teal.w3-center
+                    p(id="lugar") some text....
+
+            
